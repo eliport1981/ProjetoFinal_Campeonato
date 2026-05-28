@@ -53,7 +53,7 @@ public class Partida {
                     LocalDate anoInicial = LocalDate.of(2003, 1, 1);
                     // variável que terá a data de referência com data do último dia de 2022 para comparação
                     LocalDate anoFinal = LocalDate.of(2022, 12, 31);
-                    // Compara se a data da stream está entre o período de referência (2008 a 2022)
+                    // Compara se a data da stream está entre o período de referência (2003 a 2022)
                     return (data1.isAfter(anoInicial) || data1.isEqual(anoInicial)) &&
                            (data1.isBefore(anoFinal) || data1.isEqual(anoFinal));
                 })
@@ -64,7 +64,7 @@ public class Partida {
         return menosJogos.entrySet().stream()
                 .min(Map.Entry.comparingByValue())
                 .map(Map.Entry::getKey)
-                .orElse("Nenhum time encontrado no período de 2003 a 2022");
+                .orElse("Nenhum estado encontrado no período de 2003 a 2022");
     }
 
     // MÉTODO: Placar da partida com mais gols
